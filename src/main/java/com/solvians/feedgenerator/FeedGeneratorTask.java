@@ -16,8 +16,8 @@ public class FeedGeneratorTask implements Callable<String> {
      */
     @Override
     public String call() throws Exception {
-        CertificateGenerator.generateCertificates();
+        Certificates certificates= CertificateGenerator.generateCertificates();
         Thread.sleep(1000);
-        return Thread.currentThread().getName();
+        return Thread.currentThread().getName()+" :: "+certificates.toString();
     }
 }

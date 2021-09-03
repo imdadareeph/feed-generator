@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class CertificateGenerator {
 
-    public static void generateCertificates() {
+    public static Certificates generateCertificates() {
         Certificates certificates = new Certificates();
         certificates.setTimestamp(Timestamp.from(Instant.now()));
         certificates.setIsin(randomISIN());
@@ -20,8 +20,8 @@ public class CertificateGenerator {
         certificates.setAskPrice(generateRandomDoubles());
         certificates.setAskSize(1000);
 
-        System.out.println(certificates);
-
+        //System.out.println(certificates);
+        return certificates;
     }
 
     public static String randomISIN() {

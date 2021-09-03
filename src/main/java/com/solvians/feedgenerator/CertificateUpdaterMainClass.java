@@ -30,7 +30,7 @@ public class CertificateUpdaterMainClass {
         }
         for(Future<String> fut : list){
             try {
-                System.out.println(new Date()+ "::"+fut.get());
+                System.out.println(fut.get());
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
@@ -50,8 +50,8 @@ public class CertificateUpdaterMainClass {
         StringBuilder sb = new StringBuilder();
         for(Future<String> fut : list){
             try {
-                sb.append(new Date()+ "::"+fut.get());
-                System.out.println(new Date()+ "::"+fut.get());
+                sb.append(fut.get()).append("\n");
+                System.out.println(fut.get());
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
