@@ -37,7 +37,7 @@ public class CertificateGenerator {
             int randomIndex = randomGenerator.nextInt(allCharacters.length());
             randomNum.append(allCharacters.charAt(randomIndex));
         }
-        for (int i = 1; i < 2; i++) {
+        for (int i = 1; i < 3; i++) {
             int randomIndex = randomGenerator.nextInt(allCharacters.length());
             randomString.append(alphabetsInUpperCase.charAt(randomIndex));
         }
